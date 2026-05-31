@@ -359,7 +359,7 @@ export default function App() {
             className="flex items-center gap-2.5 cursor-pointer group"
           >
             <div className="relative flex items-center justify-center w-8 h-8 rounded-sm border border-terminal-green/40 group-hover:border-white transition-all bg-[#1a1a1a]">
-              <span className="material-symbols-outlined text-[18px] text-terminal-green group-hover:text-white transition-colors animate-pulse">terminal</span>
+              <img src="/favicon-dark.svg" alt="Personal Logo" />
             </div>
             <div>
               <div className="font-display text-sm font-bold text-white tracking-wider">
