@@ -95,7 +95,7 @@ export default function ContactForm({ onSuccessLogged }: ContactFormProps) {
           method: "POST",
           mode: "no-cors", // Crucial for standard Google Sheets Google Apps Script redirect handling without CORS preflight block
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "text/plain"
           },
           body: JSON.stringify(payload)
         });

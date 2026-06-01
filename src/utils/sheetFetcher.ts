@@ -77,13 +77,13 @@ export function parseCSV(csvText: string): any[] {
   return rows;
 }
 
-function getGidExportUrl(baseUrl: string, gid: string): string {
+function getGidExportUrl(baseUrl: string, gid?: string): string {
   const trimmed = baseUrl.trim();
   // Extract spreadsheet ID if of a standard format: /spreadsheets/d/ID/
   const match = trimmed.match(/\/spreadsheets\/d\/([a-zA-Z0-9-_]+)/);
   if (match && match[1]) {
     const spreadsheetId = match[1];
-    return `https://docs.google.com/spreadsheets/d/${spreadsheetId}/export?format=csv&gid=${gid}`;
+    return `https://docs.google.com/spreadsheets/d/${spreadsheetId}/export?format=csv${gid ? `&gid=${gid}` : ""}`;
   }
   return trimmed;
 }
